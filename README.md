@@ -15,6 +15,43 @@ _Du kan ta bort all text som finns sedan tidigare_.
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
+
+För att lösa denna uppgift har först En ny akvititet skapats genom File > Activity > Empty Activity,
+denna döptes till MyActivity.
+
+Sedan har Text och knapp lagts till i MainActivity.
+Knappen har fått sin funktionalitet i "MainActivity.java" genom koden:
+```
+Button button=findViewById(R.id.startActivity2);
+
+button.setOnClickListener(new View.OnClickListener(){
+    OnClick(){
+        Intent
+        Extras
+        StartActivity
+}
+```
+
+Intent och Extras säger åt knappen vad den ska göra, Intent startar MyActivity
+och Extras skickar med tillhörande data som man kan välja att ha med själv.
+jag valde 2 strings som har med mitt namn och ett nummer.
+Denna kod hämtar extras till MyActivity.
+
+```
+String name = extras.getString("Name");
+String number = extras.getString("Number");
+
+TextView nameText=findViewById(R.id.name);
+nameText.setText(name);
+
+TextView numberText=findViewById(R.id.number);
+numberText.setText(number);
+```
+
+Sist har TextViews lagts till i MyActivity, den första har satt text,
+de andra 2 använder Extras variabler för att få sin text.
+
+
 ```
 function errorCallback(error) {
     switch(error.code) {
@@ -33,7 +70,8 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](android.png)
+![](Activity1.png)
+![](Activity2.png)
 
 Läs gärna:
 
